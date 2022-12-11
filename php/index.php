@@ -1,18 +1,24 @@
-<HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+     <form action="login.php" method="post">
+     	<h2>LOGIN</h2>
+     	<?php if (isset($_GET['error'])) { ?>
+     		<p class="error"><?php echo $_GET['error']; ?></p>
+     	<?php } ?>
+     	<label>User Name</label>
+     	<input type="text" name="uname" placeholder="User Name"><br>
 
-<HEAD>
-<TITLE>Login Php</TITLE>
-</HEAD>
+     	<label>User Name</label>
+     	<input type="password" name="password" placeholder="Password"><br>
 
-<BODY>
-<h2>Compila i campi con i tuoi dati<h2>
-<form method = "post" action = "login.php">
-<input type="text" placeholder="Enter Username" name="username" required>
-<input type="password" placeholder="Enter Password" name="password" required></br>
-</br>
-<input type = "submit" value = "Registrati">
-</form>
+     	<button type="submit">Login</button>
+		<a href="registra.php">Non hai un'account?</a>
 
-</BODY>
-
-</HTML>
+     </form>
+</body>
+</html>
